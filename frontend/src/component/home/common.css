@@ -1,0 +1,43 @@
+#home_categories  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#home_categories div .box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    padding: 10px;
+}
+
+
+.product_list_items {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.product_list_items button {
+    border-radius: 49px !important;
+    font-size: 12px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ff934b 0%,#ff5e62 100%);
+}
+
+.product_list_items .old_price {
+    text-decoration: line-through;
+}
+
+
+ .product_list_items h5 {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 0;
+        color: #0cc5b7;
+    }
