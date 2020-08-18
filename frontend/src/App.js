@@ -10,6 +10,7 @@ import {
 import {routes,RouteWithSubRoutes} from "./routes";
 import Navbar from './component/common/navbar';
 import Searchbar from './component/common/searchbar';
+import Footer from './component/common/footer';
 
 
 function App() {
@@ -26,6 +27,8 @@ function App() {
                 <RouteWithSubRoutes key={i} {...route} />
               ))}
             </Switch>
+
+            <Footer />
         </div>
       </Router>
     </div>

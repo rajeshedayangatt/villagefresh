@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProductlistItems = (props) => {
 
@@ -10,7 +11,7 @@ const ProductlistItems = (props) => {
                 <br />
 
                 <div className="d-block">
-                <h5>{props.product.name}</h5>
+                <h5><Link to={`/product/${props.product.slug_url}`}>{props.product.name}</Link></h5>
 
                 </div>
 
@@ -23,6 +24,8 @@ const ProductlistItems = (props) => {
 
                 <button >Add to cart</button>
 
+
+                
                 </div>
 
             </div>

@@ -1,5 +1,5 @@
-import React from "react";
-import ProductlistItems from "./productlistitems";
+import React,{useEffect,useState} from "react";
+import { useParams } from "react-router-dom";
 
 const list = [
     { id : 1 , name : "Organic Sweet Corn" , slug_url : 'organic-sweet-corn' , old_price : '$18.00' , current_price : '$14.99' , image : '/assets/images/products/corn.png' , stock_status : true , weight : '1kg'},
@@ -12,19 +12,31 @@ const list = [
     { id : 8 , name : "Washed Sugar Peas" , slug_url : 'washed-sugar-snap-peas', old_price : '$18.00' , current_price : '$14.99' , image : '/assets/images/products/corn.png' , stock_status : true , weight : '1kg'},
 ];
 
-const ProductList = () => {
+const ProductDetails = () => {
+    let { name } = useParams();
+    let [details , setProductdetails]=  useState({});
+    useEffect(() => {
 
-    return (
-        <div className="row">
-        {
-            list.map( val => {
-                return  <ProductlistItems key={val.id} product={val}  />
-            })
+        let product_details = list.filter( product => product.slug_url === name );
+        if(product_details){
+            setProductdetails(product_details);
         }
+
+
+    }, [name])
+
+    return(
+        <div>
+           {
+
+            Object.keys(details).length === 0 && details.constructor === Object  && 
+                <h3>Test : {details.name}</h3>
+            
+           } 
+            <h1>Product details page : {name}</h1>
         </div>
     )
-
-
 };
 
-export default ProductList;
+
+export default ProductDetails;

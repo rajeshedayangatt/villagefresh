@@ -2,10 +2,15 @@ import React from "react";
 import {Route} from "react-router-dom";
 import Home from "./component/home";  
 import About from "./component/about";
+import ProductDetails from "./component/product_details";
   
 
 
 export const routes = [
+    {
+      path : '/product/:name',
+      component : ProductDetails
+    },
     {
         path : '/home',
         component : Home
