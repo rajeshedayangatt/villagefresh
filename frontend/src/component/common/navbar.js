@@ -28,10 +28,10 @@ const Navbar = () => {
                      Pages
                      </a>
                      <div className="dropdown-menu">
-                        <a className="dropdown-item" href="https://askbootstrap.com/preview/groci/shop.html"><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Shop Grid</a>
-                        <a className="dropdown-item" href="https://askbootstrap.com/preview/groci/single.html"><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Single Product</a>
-                        <a className="dropdown-item" href="https://askbootstrap.com/preview/groci/cart.html"><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Shopping Cart</a>
-                        <a className="dropdown-item" href="https://askbootstrap.com/preview/groci/checkout.html"><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Checkout</a> 
+                        <Link className="dropdown-item" to="/shop" ><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Shop Grid</Link>
+                        <Link className="dropdown-item" to="/product/organic-sweet-corn" ><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Single Product</Link>
+                        <Link className="dropdown-item" to="/cart" ><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Shopping Cart</Link>
+                        <Link className="dropdown-item" to="/checkout" ><i className="mdi mdi-chevron-right" aria-hidden="true"></i> Checkout</Link> 
                      </div>
                   </li>
                   <li className="nav-item dropdown">

@@ -6,9 +6,23 @@ import ProductDetails from "./component/product_details";
 import Shop from "./component/shop";
 import Cart from "./component/cart";
 import Checkout from "./component/checkout";
-
+import MyProfile from "./component/myprofile";
+import MyAddress from "./component/myaddress";
+import Wishlist from "./component/wishlist";
 
 export const routes = [
+    {
+      path : '/wishlist',
+      component : Wishlist
+    },
+    {
+      path : '/address',
+      component : MyAddress
+    },
+    {
+      path : '/profile',
+      component : MyProfile
+    },
     {
       path : '/checkout',
       component : Checkout
