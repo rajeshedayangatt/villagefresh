@@ -3,10 +3,24 @@ import {Route} from "react-router-dom";
 import Home from "./component/home";  
 import About from "./component/about";
 import ProductDetails from "./component/product_details";
-  
+import Shop from "./component/shop";
+import Cart from "./component/cart";
+import Checkout from "./component/checkout";
 
 
 export const routes = [
+    {
+      path : '/checkout',
+      component : Checkout
+    },
+    {
+      path : '/cart',
+      component : Cart
+    },
+    {
+      path : '/shop',
+      component : Shop
+    },
     {
       path : '/product/:name',
       component : ProductDetails

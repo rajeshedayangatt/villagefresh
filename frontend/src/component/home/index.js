@@ -3,18 +3,22 @@ import Categories from "./categories";
 import Banner from "./banner";
 import ProductList from "./productlist";
 import Footer from "../common/footer";
+import Header from "../common/header";
+import OfferProduct from "./offer_product";
+import BestOffers from "./bestoffer";
+import Services from "../common/services";
 
 
 const Home = () => {
     return(
-        <div>
-            <Categories />
+        <>
             <Banner />
+            <Categories />
             <ProductList />
-            <div className="d-block mt-5">
-                <img src="/assets/images/advertisment.png" />
-            </div>
-        </div>
+            <OfferProduct />
+            <BestOffers />
+            <Services />
+        </>
     )
 };
 

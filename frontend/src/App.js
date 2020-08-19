@@ -3,35 +3,33 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+
 } from "react-router-dom";
 
 import {routes,RouteWithSubRoutes} from "./routes";
 import Navbar from './component/common/navbar';
-import Searchbar from './component/common/searchbar';
 import Footer from './component/common/footer';
+import Header from './component/common/header';
+import Copyright from './component/common/copyright';
 
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Router>
-        <div className="container">
-           
-          <Searchbar></Searchbar>
+          <Header />
           <Navbar></Navbar>
 
-            <Switch>
+          <Switch>
               {routes.map((route, i) => (
                 <RouteWithSubRoutes key={i} {...route} />
               ))}
-            </Switch>
+          </Switch>
 
-            <Footer />
-        </div>
+          <Footer />
+          <Copyright />
       </Router>
-    </div>
+    </>
   );
 }
 
