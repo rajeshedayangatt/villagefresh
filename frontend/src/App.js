@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useEffect} from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -12,8 +12,15 @@ import Footer from './component/common/footer';
 import Header from './component/common/header';
 import Copyright from './component/common/copyright';
 
+import { connect } from "react-redux";
+import { checkUserAlreadyLogined } from "./redux/action/commonActions";
 
-function App() {
+function App(props) {
+
+  useEffect( () => {
+    props.checkUserStatus();
+  } , [])
+
   return (
     <>
       <Router>
@@ -33,4 +40,11 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+
+  return {
+      checkUserStatus : () =>  dispatch(checkUserAlreadyLogined())
+  }
+
+}
+export default connect(null,mapDispatchToProps)(App);
