@@ -17,7 +17,7 @@ export const checkUserAlreadyLogined = () => {
                 headers: {
                   'Authorization': userinfo
                 }
-              }).then((res) => {
+            }).then((res) => {
                         dispatch({
                             type : "LOAD_USER",
                             payload : {
@@ -25,7 +25,7 @@ export const checkUserAlreadyLogined = () => {
                                 user_info : res.data.response
                             }
                         })
-                  })
+            })
 
         }
 
