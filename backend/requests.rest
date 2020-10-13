@@ -1,0 +1,21 @@
+# POST  http://localhost:8080/api/common/register
+
+# content-type: application/json
+
+# {
+#     first_name : "Rajesh",
+#     last_name : "E",
+#     email : "rajesh@gmail.com",
+#     mobile : 8157836809,
+#     password : "123456",
+
+# }
+
+POST  http://localhost:8080/api/common/login
+
+content-type: application/json
+
+{
+    email : "rajesh@gmail.com",
+    password : "123456",
+}

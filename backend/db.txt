@@ -1,0 +1,113 @@
+http://thevillagefresh.com/   
+User 
+------
+
+1. User registration
+2. User login
+3. user profile view
+4. user profile update
+5. user cart
+6. user orders
+7. user liked products
+8. user address update
+9  user logout
+
+
+Products 
+---------
+1.Categories listing [ with filtering]
+2.Product listing
+3.Product details showing
+4. products reviews
+5. product related products
+
+Cart 
+-------
+1.Add product to cart
+2.Cart item update
+
+Checkout
+-------
+1.updating billing address
+2.showing previous billing address
+3.cart to order
+
+
+
+===================================================================================================
+
+a > customer collection
+    {
+
+        first name ,
+        last name ,
+        email ,
+        mobile,
+        display name,
+        password,
+        billing address,
+        shipping address,
+
+    }
+
+b > categories collection 
+    {
+        category name ,
+    }
+
+c > product collection 
+
+    {
+
+        product sku ,
+        product name ,
+        product description ,
+        product purchase type - {
+            [
+                title ,
+                base price ,
+                discounted price ,
+                quantity,
+                image
+            ]
+        }
+        product offer,
+        product common images,
+        product categorie id ,
+        product reviews,
+        product delivery time note,
+        product similiar products array ,
+        product inserted 
+        product updated
+        
+    }
+
+
+d > Cart collection 
+    {
+        customer id ,
+        product id,
+        product purchase type data,
+        product purchase quantity,
+        cart status
+    }
+e > Order collection 
+    {
+        customer id,
+        customer shipping addres ,
+        customer billing address ,
+        product item data - [] ,
+        payment status,
+        delivery status,
+        delivery date
+
+    }
+
+f > 
+
+
+
+
+
+
+

@@ -38,7 +38,12 @@ app.get("/" , (req,res) => {
 
 // require("./app/routes/tutorial.routes")(app);
 var userRoute = require("./app/routes/user.routes");
+var commonRoute = require("./app/routes/common.routes");
+var productRoute = require("./app/routes/product.routes");
+
 app.use("/api/user",userRoute);
+app.use("/api/common",commonRoute);
+app.use("/api/product",productRoute);
 
 const PORT = process.env.PORT || 8080;
 
